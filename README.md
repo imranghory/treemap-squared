@@ -16,44 +16,45 @@ The code base is split into two files:
 * treemap-raphael.js - Visualize output of treemap-squarify.js (based on the Raphael vector graphics library)
 
 
-Dependencies
-============
-
-Raphaeljs - http://raphaeljs.com/   
-Needed for the visualization
-
-
 Using Treemap Squared
 =========================
 
-First include the dependencies in your header
+First include the dependencies in your &lt;head&gt; tags:
 
 ```html   
-    /*  the raphael vector library */
-    <script type="text/javascript" src="raphael-min.js"></script>
+ /*  the raphael vector library */
+ <script type="text/javascript" src="raphael-min.js"></script>
     
-    /* treemapping libraries */
-    <script type="text/javascript" src="treemap-squarify.js"></script>
-    <script type="text/javascript" src="treemap-raphael.js"></script>
+/* treemapping libraries */
+<script type="text/javascript" src="treemap-squarify.js"></script>
+<script type="text/javascript" src="treemap-raphael.js"></script>
 ```
 
 Add a div where you want the treemap to be inserted:
 
 ```html   
-	<div id="example-1"></div>
+<div id="example-1"></div>
 ```
 
-And then the javascript:
+And then the javascript to do the drawing:
 
 ```html   
 <script type="text/javascript">
+    $(document).ready(function () {
+        data = [60000, 60000, 40000, 30000, 20000, 10000];
+        labels = ["Paris", "London", "New York", "Moscow", "Berlin", "Tokyo"];
+        Treemap.draw("example-1", 400, 300, data, labels);
+    });
+</script>
+```
 
+```html   
+<script type="text/javascript">
     $(document).ready(function () {
         data = [[60000, 60000, 40000], [30000, 20000, 10000]];
         labels = [["Paris", "London", "New York"], ["Moscow", "Berlin", "Tokyo"]];
         Treemap.draw("example-1", 400, 300, data, labels);
     });
-
 </script>
 ```
 
