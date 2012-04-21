@@ -1,0 +1,24 @@
+<html>
+<head>
+    <!-- just usingjquery for the $(document).ready() - we don't need it for charting  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>     
+    <!-- need the raphael vector library -->
+    <script type="text/javascript" src="raphael-min.js"></script>
+    <!-- our two treemapping libraries - alternatively use treemap-min.js which combines them for production use -->
+    <script type="text/javascript" src="../treemap-squarify.js"></script>
+    <script type="text/javascript" src="../treemap-raphael.js"></script>
+</head>
+<body>
+
+<div id="example-2"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        data = [[60000, 60000, 40000], [30000, 20000, 10000]];
+        labels = [["Paris", "London", "New York"], ["Moscow", "Berlin", "Tokyo"]];  
+        Treemap.draw("example-2", 600, 450, data, labels);
+    });
+</script>
+
+</body>
+</html>
