@@ -32,7 +32,7 @@
                     originalproperties[property] = newproperties[property];
                 }
             }
-         return originalproperties  ;
+         return originalproperties;
         }
 
         // drawTreemap - recursively iterate through the nested array of boxes
