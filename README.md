@@ -1,7 +1,7 @@
 treemap-squared
 ===============
 
-![Example](examples/example.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example.png)
 
 
 Treemap Squared provides a way to easily generate attractive Treemaps.
@@ -34,16 +34,16 @@ Feel free to skip the descriptions here to the examples below.
 
 ```javascript   
 Treemap.draw(element, width, height, data, labels, styles);
-/* element - the "id" of the HTML DOM element to insert the chart into, alternatively you can
-   specify the element directly. For example using jQuery you could use $("#myId")[0].
-   width - the width of the chart in pixels
-   height - the height of the chart in pixels
-   data - an array of numeric values to chart 
-   labels - the labels associated with the numeric values in the same order as the data array
-   styles - optional associative array of styles
+// element - the "id" of the HTML DOM element to insert the chart into, alternatively you can
+//           specify the element directly. For example using jQuery you could use $("#myId")[0].
+// width - the width of the chart in pixels
+// height - the height of the chart in pixels
+// data - an array of numeric values to chart 
+// labels - the labels associated with the numeric values in the same order as the data array
+// styles - optional associative array of styles
 ```
 
-It's common that users of Treemaps will sort the data before charting it in order to make the charts more attractive (this will result in the largest items appearing in the top left and the smallest in the bottom right), however this isn't neccesary.
+It's common that users of treemaps will sort the data before charting it in order to make the charts more attractive (this will result in the largest items appearing in the top left and the smallest in the bottom right), however this isn't neccesary.
 
 The styles array allows for the Treemaps appearance to be customized.
 
@@ -90,7 +90,7 @@ And then the javascript to do the drawing:
 </script>
 ```
 
-![Example](examples/example-1.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-1.png)
 [Example-1 Source Code](examples/example-1.html)
 
 Multidimensional data
@@ -107,7 +107,7 @@ Treemap Squared also supports multidimensional data using nested arrays allowing
     });
 </script>
 ```
-![Example](examples/example-2.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-2.png)
 [Example-1 Source Code](examples/example-2.html)
 
 Styling
@@ -125,7 +125,7 @@ If you wanted to draw a treemap which would be photocopied frequently (i.e an ac
 </script>
 ```
 
-![Example](examples/example-3.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-3.png)
 [Example-3 Source Code](examples/example-3.html)
 
 Alternatively you might want to add some texture to your treemap making it feel less flat. You can achieve this by setting a texture as the background and increasing the opacity of the boxes.
@@ -142,7 +142,7 @@ Alternatively you might want to add some texture to your treemap making it feel 
 ```
 (While the CSS3 'fill-opacity' property is only supported by Webkit, treemap-raphael includes a shim adding support in this case to most modern browsers including Firefox and IE9+. Older versions of IE back to IE6 will instead fallback to showing solid colours)
 
-![Example](examples/example-4.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-4.png)
 
 Styling using functions
 -----------------------
@@ -179,7 +179,7 @@ Styling can also be done using functions as demonstrated here in this chart in w
 </script>
 ```
 
-![Example](examples/example-5.png)
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-5.png)
 
 treemap-squarify.js
 ====================
