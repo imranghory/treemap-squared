@@ -4,9 +4,9 @@ treemap-squared
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example.png)
 
 
-Treemap Squared provides a way to easily generate attractive Treemaps.
+Treemap Squared provides a way to easily generate attractive treemaps.
 
-It was developed due to the lack of attractive options for generating simple Treemaps. Historically most Treemap libraries have been focused purely on function rather than aesthetics resulting in very brutalist styles of design (some examples can been seen on the [Wikipedia Treemap Page](http://en.wikipedia.org/wiki/Treemapping)). 
+It was developed due to the lack of attractive options for generating simple treemaps. Historically most treemap libraries have been focused purely on function rather than aesthetics resulting in very brutalist styles of design (some examples can been seen on the [Wikipedia Treemap Page](http://en.wikipedia.org/wiki/Treemapping)). 
 
 However modern uses such as web applications and infographics place higher importance on aesthetics, and that's the need this library aims to serve.
 
@@ -45,7 +45,7 @@ Treemap.draw(element, width, height, data, labels, styles);
 
 It's common that users of treemaps will sort the data before charting it in order to make the charts more attractive (this will result in the largest items appearing in the top left and the smallest in the bottom right), however this isn't neccesary.
 
-The styles array allows for the Treemaps appearance to be customized.
+The styles array allows for the treemaps appearance to be customized.
 
 ```javascript   
 styles['background'] // the style of the background in the treemap
@@ -191,7 +191,7 @@ treemap-squarify.js
 
 treemap-squarify.js contains the code to calculate the structure of the treemap, it's designed so it can easily be used with any graphics library that supports the drawing of boxes.
 
-The Treemap algorithm used can be found in:
+The treemap algorithm used can be found in:
 
 > [Squarified Treemaps](http://www.win.tue.nl/~vanwijk/stm.pdf) (2000)  
 > by Bruls, Mark; Huizing, Kees; van Wijk, Jarke J.  
