@@ -17,7 +17,7 @@ The code base is split into two files:
 * treemap-squarify.js  -  Code to calculate the treemap structure for given data
 * treemap-raphael.js - Visualize output of treemap-squarify.js (based on the Raphael vector graphics library)
 
-
+However most users will want to use the minified version which merges both of these. This can be found in the [/min](/min) directory.
 
 Browser Compatibility
 =========================
@@ -43,7 +43,7 @@ Treemap.draw(element, width, height, data, labels, styles);
 // styles - optional associative array of styles
 ```
 
-It's common that users of treemaps will sort the data before charting it in order to make the charts more attractive (this will result in the largest items appearing in the top left and the smallest in the bottom right), however this isn't neccesary.
+It's common that users of treemaps will sort the data in descending order to make the charts more attractive (this will result in the largest items appearing in the top left and the smallest in the bottom right), however this isn't neccesary.
 
 The styles array allows for the treemaps appearance to be customized:
 
@@ -109,12 +109,12 @@ Treemap Squared also supports multidimensional data using nested arrays allowing
 ```
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-2.png)  
-[Example-1 Source Code](examples/example-2.html)
+[Example-2 Source Code](examples/example-2.html)
 
 Styling
 -------
 
-If you wanted to draw a treemap which would be photocopied frequently (i.e an academic paper) you might want to style it in black and white and thicken the lines:
+If you wanted to draw a treemap which would be photocopied frequently (i.e for an academic paper) you might want to style it in black and white and thicken the lines:
 
 ```html   
 <script type="text/javascript">
