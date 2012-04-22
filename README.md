@@ -67,9 +67,8 @@ First include the dependencies in your &lt;head&gt; tags:
  /*  the raphael vector library */
  <script type="text/javascript" src="raphael-min.js"></script>
     
-/* treemapping libraries */
-<script type="text/javascript" src="treemap-squarify.js"></script>
-<script type="text/javascript" src="treemap-raphael.js"></script>
+/* treemapping library */
+<script type="text/javascript" src="treemap-squared-0.5.min.js"></script>
 ```
 
 Add a div where you want the treemap to be inserted:
