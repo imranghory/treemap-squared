@@ -91,7 +91,7 @@ And then the javascript to do the drawing:
 
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-1.png)  
-[Example-1 Source Code](examples/example-1.html)
+[Example-1 Source Code](https://github.com/imranghory/treemap-squared/blob/master/examples/example-1.html)
 
 Multidimensional data
 ---------------------
@@ -109,7 +109,7 @@ Treemap Squared also supports multidimensional data using nested arrays allowing
 ```
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-2.png)  
-[Example-2 Source Code](examples/example-2.html)
+[Example-2 Source Code](https://github.com/imranghory/treemap-squared/blob/master/examples/example-2.html)
 
 Styling
 -------
@@ -129,7 +129,7 @@ If you wanted to draw a treemap which would be photocopied frequently (i.e for a
 ```
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-3.png)  
-[Example-3 Source Code](examples/example-3.html)
+[Example-3 Source Code](https://github.com/imranghory/treemap-squared/blob/master/examples/example-3.html)
 
 Alternatively you might want to add some texture to your treemap making it feel less flat. You can achieve this by setting a texture as the background and increasing the opacity of the boxes.
 
@@ -149,7 +149,7 @@ Alternatively you might want to add some texture to your treemap making it feel 
 
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-4.png)   
-[Example-4 Source Code](examples/example-4.html)
+[Example-4 Source Code](https://github.com/imranghory/treemap-squared/blob/master/examples/example-4.html)
 
 Styling using functions
 -----------------------
@@ -187,7 +187,7 @@ Styling can also be done using functions as demonstrated in this chart in which 
 ```
 Resulting treemap:  
 ![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-5.png)  
-[Example-5 Source Code](examples/example-5.html)
+[Example-5 Source Code](https://github.com/imranghory/treemap-squared/blob/master/examples/example-5.html)
 
 treemap-squarify.js
 ====================
