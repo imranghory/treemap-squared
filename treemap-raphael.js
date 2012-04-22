@@ -1,7 +1,7 @@
 /*
  * Treemap Squared 0.5 - Treemap Charting library 
  *
- * http://treemapsquared.github.com
+ * https://github.com/imranghory/treemap-squared/
  *
  * Copyright (c) 2012 Imran Ghory (imranghory@gmail.com)
  * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
@@ -141,12 +141,21 @@
                     var x1=coordinates[0], y1=coordinates[1], x2=coordinates[2], y2=coordinates[3];
                     var box, text;
                     var boxattr, labelattr;
+                    var rgbobj;
 
                     // draw box 
                     box = paper.rect(x1, y1, x2 - x1, y2 - y1);
                     
                     boxattr = isFunction(styles.box) ? styles.box(coordinates, newindex) : styles.box;
                     boxattr = mergeProperties(boxFormatter(coordinates, newindex), boxattr);
+
+                    // dirty hack to fix opacity support in non-webkit web browsers
+                    if ("fill-opacity" in boxattr) {
+                        rgbobj = Raphael.getRGB(boxattr.fill);
+                        if (!rgbobj.error) {
+                            boxattr.fill = "rgba(" + rgbobj.r + "," + rgbobj.g + "," + rgbobj.b + "," + boxattr['fill-opacity'] + ")";
+                        } 
+                    }
 
                     box.attr(boxattr);
 
@@ -174,6 +183,7 @@
 
             // create our canvas and style the background 
             paper = new Raphael(element, width, height);
+
             background = paper.rect(0, 0, width, height);
             background.attr(styles.background);
 
