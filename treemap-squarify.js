@@ -3,7 +3,7 @@
  *
  * Treemap Squared 0.5 - Treemap Charting library 
  *
- * http://treemapsquared.github.com
+ * https://github.com/imranghory/treemap-squared/
  *
  * Copyright (c) 2012 Imran Ghory (imranghory@gmail.com)
  * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
@@ -29,6 +29,7 @@
 var Treemap = {};
 
 (function() {
+    "use strict";
     Treemap.generate = function(){
 
         function Container(xoffset, yoffset, width, height) {
@@ -110,18 +111,19 @@ var Treemap = {};
             var mergeddata = [];
             var mergedtreemap;
             var results = [];
+            var i;
 
             if(isArray(data[0])) { // if we've got more dimensions of depth
                 for(i=0; i<data.length; i++) {
                     mergeddata[i] = sumMultidimensionalArray(data[i]);
                 }
-                mergedtreemap = treemapSingledimensional(mergeddata, width, height, xoffset, yoffset)
+                mergedtreemap = treemapSingledimensional(mergeddata, width, height, xoffset, yoffset);
                 
                 for(i=0; i<data.length; i++) {
                     results.push(treemapMultidimensional(data[i], mergedtreemap[i][2] - mergedtreemap[i][0], mergedtreemap[i][3] - mergedtreemap[i][1], mergedtreemap[i][0], mergedtreemap[i][1]));
                 }
             } else {
-                    results = treemapSingledimensional(data,width,height, xoffset, yoffset);
+                results = treemapSingledimensional(data,width,height, xoffset, yoffset);
             }
             return results;
         }
@@ -134,7 +136,7 @@ var Treemap = {};
             yoffset = (typeof yoffset === "undefined") ? 0 : yoffset;
 
             var rawtreemap = squarify(normalize(data, width * height), [], new Container(xoffset, yoffset, width, height), []);
-            return flattenTreemap(rawtreemap)
+            return flattenTreemap(rawtreemap);
         }
 
         // flattenTreemap - squarify implementation returns an array of arrays of coordinates
@@ -157,7 +159,8 @@ var Treemap = {};
         //             usable data out of it 
         function squarify(data, currentrow, container, stack) {
             var length;
-            var nextdata;
+            var nextdatapoint;
+            var newcontainer;
 
             if (data.length === 0) {
                 stack.push(container.getCoordinates(currentrow));
@@ -193,7 +196,7 @@ var Treemap = {};
             var currentratio = calculateRatio(currentrow, length);
             var newratio = calculateRatio(newrow, length);
             
-            // the pseudocode in the Bruls paper has the direction of the comparission
+            // the pseudocode in the Bruls paper has the direction of the comparison
             // wrong, this is the correct one.
             return currentratio >= newratio; 
         }
@@ -229,10 +232,10 @@ var Treemap = {};
 
             if(isArray(arr[0])) {
                 for(i=0; i<arr.length; i++) {
-                    total += sumMultidimensionalArray(arr[i])
+                    total += sumMultidimensionalArray(arr[i]);
                 }
             } else {
-                total = sumArray(arr)
+                total = sumArray(arr);
             }
             return total;
         }
