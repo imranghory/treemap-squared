@@ -48,15 +48,15 @@ It's common that users of treemaps will sort the data before charting it in orde
 The styles array allows for the Treemaps appearance to be customized.
 
 ```javascript   
-styles['background'] // the style of the boxes in the treemap
+styles['background'] // the style of the background in the treemap
 styles['box'] // the style of the boxes in the treemap
 styles['label'] // the style of the labels in the treemap
 styles['draw'] // the drawing method
 ```   
 
-The background, box, and label tags can be assigned properties that will be passed to the [Rapheal attr method](http://raphaeljs.com/reference.html#Element.attr). The box and label tags can alternatively be supplied a function with the signature function(coordinates, index){} which returns the desired properties. The best way of understanding these properties is to consult the examples given below.
+The background, box, and label tags can be assigned properties that will be passed to the [Rapheal attr method](http://raphaeljs.com/reference.html#Element.attr). The box and label tags can alternatively be supplied a function with the signature function(coordinates, index){} which returns the desired properties. The best way of understanding how to use these is to consult the examples given below.
 
-The styles['draw'] property can be safely ignored by most users, it allows the user to completely replace the draw method of the library. The best way of understanding how to use this is to consult the source code in treemap-raphael.js directly.
+The styles['draw'] property can be safely ignored by most users, it allows the caller to completely replace the draw method of the library. See the source code in treemap-raphael.js directly for more details.
 
 Basic example
 -------------
@@ -90,7 +90,8 @@ And then the javascript to do the drawing:
 </script>
 ```
 
-![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-1.png)
+Resulting treemap:  
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-1.png)  
 [Example-1 Source Code](examples/example-1.html)
 
 Multidimensional data
@@ -107,7 +108,8 @@ Treemap Squared also supports multidimensional data using nested arrays allowing
     });
 </script>
 ```
-![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-2.png)
+Resulting treemap:  
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-2.png)  
 [Example-1 Source Code](examples/example-2.html)
 
 Styling
@@ -124,8 +126,8 @@ If you wanted to draw a treemap which would be photocopied frequently (i.e an ac
     });
 </script>
 ```
-
-![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-3.png)
+Resulting treemap:  
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-3.png)  
 [Example-3 Source Code](examples/example-3.html)
 
 Alternatively you might want to add some texture to your treemap making it feel less flat. You can achieve this by setting a texture as the background and increasing the opacity of the boxes.
@@ -142,7 +144,9 @@ Alternatively you might want to add some texture to your treemap making it feel 
 ```
 (While the CSS3 'fill-opacity' property is only supported by Webkit, treemap-raphael includes a shim adding support in this case to most modern browsers including Firefox and IE9+. Older versions of IE back to IE6 will instead fallback to showing solid colours)
 
-![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-4.png)
+Resulting treemap:  
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-4.png)   
+[Example-4 Source Code](examples/example-4.html)
 
 Styling using functions
 -----------------------
@@ -178,8 +182,9 @@ Styling can also be done using functions as demonstrated here in this chart in w
     });
 </script>
 ```
-
-![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-5.png)
+Resulting treemap:  
+![Example](https://github.com/imranghory/treemap-squared/raw/master/examples/example-5.png)  
+[Example-5 Source Code](examples/example-5.html)
 
 treemap-squarify.js
 ====================
