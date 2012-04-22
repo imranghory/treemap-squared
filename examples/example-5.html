@@ -1,0 +1,46 @@
+<html>
+<head>
+    <!-- just usingjquery for the $(document).ready() - we don't need it for charting  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>     
+    <!-- need the raphael vector library -->
+    <script type="text/javascript" src="raphael-min.js"></script>
+    <!-- our two treemapping libraries - alternatively use treemap-min.js which combines them for production use -->
+    <script type="text/javascript" src="../treemap-squarify.js"></script>
+    <script type="text/javascript" src="../treemap-raphael.js"></script>
+</head>
+<body>
+
+<div id="example-5"></div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var data = [[60000, 60000, 40000], [30000, 20000, 10000]];
+        var labels = [["Paris", "London", "New York"], ["Moscow", "Berlin", "Tokyo"]]; 
+
+        var boxFormatter = function (coordinates, index) {
+            // so in this case an index of [1,1] would refer to "London" and [2,1] to "Berlin"
+            // coordinates are in the form [x1,y1,x2,y2]
+
+            var datapoint,i, color;
+
+            // get the value of the data point using the index to find it         
+            datapoint = data;
+            for (i=0; i<index.length; i++){
+                datapoint = datapoint[index[i]];
+            }  
+
+            var saturation = ((datapoint / 60000)*0.6) + 0.4;
+            var brightness = ((datapoint / 60000)*0.3) + 0.2;
+            color = "hsb(0.2," + saturation + "," + brightness + ")";
+
+            return{ "fill" : color };
+        };
+
+        Treemap.draw("example-5", 600, 200, data, labels, {'box' : boxFormatter});
+    });
+</script>
+
+</body>
+</html>

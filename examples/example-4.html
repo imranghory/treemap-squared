@@ -12,30 +12,12 @@
 
 <div id="example-4"></div>
 
-
-
 <script type="text/javascript">
     $(document).ready(function () {
         var data = [[60000, 60000, 40000], [30000, 20000, 10000]];
-        var labels = [["Paris", "London", "New York"], ["Moscow", "Berlin", "Tokyo"]]; 
+        var labels = [["Paris", "London", "New York"], ["Moscow", "Berlin", "Tokyo"]];  
 
-        var boxFormatter = function (coordinates, index) {
-            var datapoint,i, color;
-
-            // get the value of the data point using the index to find it         
-            datapoint = data;
-            for (i=0; i<index.length; i++){
-                datapoint = datapoint[index[i]];
-            }  
-
-            var saturation = ((datapoint / 60000)*0.6) + 0.4;
-            var brightness = ((datapoint / 60000)*0.3) + 0.2;
-            color = "hsb(0.2," + saturation + "," + brightness + ")";
-
-            return{ "fill" : color };
-        };
-
-        Treemap.draw("example-4", 600, 200, data, labels, {'box' : boxFormatter});
+        Treemap.draw("example-4", 600, 450, data, labels, {'background' : {'fill': 'url("marble.jpg")'}, 'box' : {'fill-opacity' : "0.7"}});
     });
 </script>
 
