@@ -6,9 +6,13 @@ treemap-squared
 
 Treemap Squared provides a way to easily generate attractive treemaps.
 
-It was developed due to the lack of attractive options for generating simple treemaps. Historically most treemap libraries have been focused purely on function rather than aesthetics resulting in very brutalist styles of design (some examples can been seen on the [Wikipedia Treemap Page](http://en.wikipedia.org/wiki/Treemapping)). 
+It was developed due to the lack of attractive options for generating simple treemaps.
 
-However modern uses such as web applications and infographics place higher importance on aesthetics and that's the need this library aims to serve.
+Historically most treemap libraries have been focused purely on function rather than aesthetics resulting in very brutalist styles of design (some examples can been seen on the [Wikipedia Treemap Page](http://en.wikipedia.org/wiki/Treemapping)), they've also focused on representing trees with high levels of depth.
+
+However modern uses such as web applications and infographics place higher importance on aesthetics and tend to require low levels of depth (for example the New York Times typically uses [http://www.nytimes.com/imagepages/2007/02/25/business/20070225_CHRYSLER_GRAPHIC.html](zero depth in it's treemaps) and financial treemaps are generally [http://www.smartmoney.com/map-of-the-market/](one level deep)) and that's the need this library aims to serve.
+
+(Treemap Squared does support arbitary levels of depth, but the default styles will probably need to be over-ridden at higher levels of depth to ensure readability)
 
 As a secondary objective it also provides a clean open-source implementation of the Squarified Treemap algorithm. While there have been other open-source implementations in the past they've generally been tightly coupled with visualization code. Treemap Squared's implementation of the algorithm (and extensions) is completely independent of the visualization code. This should make it both more readable and reusable.
 
