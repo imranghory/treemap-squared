@@ -10,7 +10,7 @@ Historically most treemap libraries have been focused purely on function rather 
 
 However modern uses such as web applications and infographics place higher importance on aesthetics and tend to require low levels of depth (for example the New York Times typically uses [zero depth in it's treemaps](http://www.nytimes.com/imagepages/2007/02/25/business/20070225_CHRYSLER_GRAPHIC.html) and financial treemaps are generally [one level deep](http://www.smartmoney.com/map-of-the-market/)) and that's the need this library aims to serve.
 
-(Treemap Squared does support arbitary levels of depth, but the default styles will probably need to be over-ridden at higher levels of depth to ensure readability)
+(Treemap Squared does support arbitrary levels of depth, but the default styles will probably need to be over-ridden at higher levels of depth to ensure readability)
 
 As a secondary objective it also provides a clean open-source implementation of the Squarified Treemap algorithm. While there have been other open-source implementations in the past they've generally been tightly coupled with visualization code. Treemap Squared's implementation of the algorithm (and extensions) is completely independent of the visualization code. This should make it both more readable and reusable.
 
@@ -98,7 +98,7 @@ Resulting treemap:
 Multidimensional data
 ---------------------
 
-Treemap Squared also supports multidimensional data using nested arrays allowing items to be grouped together. You can nest data to an arbitary number of levels of depth.
+Treemap Squared also supports multidimensional data using nested arrays allowing items to be grouped together. You can nest data to an arbitrary number of levels of depth.
 
 ```html   
 <script type="text/javascript">
@@ -204,7 +204,7 @@ The treemap algorithm used can be found in:
 
 The core algorithm is as found in the paper with a few additional (straight forward) features needed to make it practically useful:
 
-* Data normalization allowing any arbitary numeric data to be used as input
+* Data normalization allowing any arbitrary numeric data to be used as input
 * Support for multidimensional data by recursively applying the algorithm
 
 Unlike other implementations which directly call into visualization methods from within the algorithms implementation, the treemap-squarify.js library instead returns a ordered array of cartesian coordinates (the order matching that of the input data) which represents each of the boxes to be drawn which can then be passed to a visulization library. This allows for a clean decoupling of the treemap structure generation and the actual visualization.
